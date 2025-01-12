@@ -1,9 +1,10 @@
 /* =================================================
         There is two ways you can search String.
    ================================================= */
-// ====== # 1 Way - Easiest way to search String but you will face case sensitive problem ======
+// ====== # 1 Way - This way you can search String but you will face case sensitive problem ======
 // Example #1.1
-const lyrics = "Tumi bondhu kala pakhi ami jeno ki. boshonto kale tomay bolte parini. kala kala sada sada";
+const lyrics = "Tumi bondhu kala pakhi ami jeno ki." + 
+"boshonto kale tomay bolte parini. kala kala sada sada";
 
 const doesExist = lyrics.includes("pakhi"); // Search value (pakhi) spelling is correct.
 console.log(doesExist); // Expected output true
@@ -12,7 +13,8 @@ console.log(doesExist); // Expected output true
 
 // ====== Easiest way to search String but you will face case sensitive problem ======
 // Example #1.2
-const lyrics2 = "Tumi bondhu kala pakhi ami jeno ki. boshonto kale tomay bolte parini. kala kala sada sada";
+const lyrics2 = "Tumi bondhu kala pakhi ami jeno ki." + 
+"boshonto kale tomay bolte parini. kala kala sada sada";
 
 const doesExist2 = lyrics2.includes("pokhi"); // The includes() method is case sensitive make sure search value (pakhi) is correct.
 console.log(doesExist2); // Expected output false
@@ -21,7 +23,8 @@ console.log(doesExist2); // Expected output false
 
 // ====== Easiest way to search String but you will face case sensitive problem ======
 // Example #1.3
-const lyrics3 = "Tumi bondhu kala pakhi ami jeno ki. boshonto kale tomay bolte parini. kala kala sada sada";
+const lyrics3 = "Tumi bondhu kala pakhi ami jeno ki." + 
+"boshonto kale tomay bolte parini. kala kala sada sada";
 
 const doesExist3 = lyrics3.includes("Pakhi"); // The includes() method is case sensitive make sure search value (pakhi) is correct.
 console.log(doesExist3); // Expected output false
@@ -34,7 +37,7 @@ console.log(doesExist3); // Expected output false
 const lyrics4 = "Tumi bondhu kala pakhi ami jeno ki." + 
 "boshonto kale tomay bolte parini. kala kala sada sada";
 
-const searchString = "Pakhi"; // The search value (pakhi) is case sensitive make sure spelling is correct.
+const searchString = "Pakhi"; // The search value (pakhi) is case sensitive make sure spelling & case are correct.
 
 const doesExist4 = lyrics4.includes(searchString); 
 console.log(doesExist4); // Expected output false
@@ -112,9 +115,7 @@ const lyrics7 = "Tumi bondhu kala pakhi ami jeno ki." +
 const searchString7 = "Pakhi";
 
 
-/* Here apply toLowercase() method in two places with (lyrics7) string variable and (searchString7) search variable. 
-   But you didn't use toLowercase() method in second place with.*/
-
+/* Here apply toLowercase() method in two places with (lyrics7) string variable and (searchString7) search variable. */
 const doesExist7OneLineCode = lyrics7.toLowerCase().includes(searchString.toLowerCase());
 console.log(doesExist7OneLineCode); // Expected output true
 
